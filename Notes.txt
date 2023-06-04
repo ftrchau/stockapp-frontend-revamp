@@ -1,0 +1,38 @@
+Entry grid:
+Refer to C:\xampp\htdocs\udemy\vue\section8\cmp-communication-08-a-potential-problem-starting-setup\cmp-communication-08-a-potential-problem-starting-setup
+
+Route:
+Refer to C:\xampp\htdocs\udemy\vue\section13
+npm install --save vue-router
+
+For handling date easier:
+npm install --save moment
+
+Install axios to call http request easier:
+npm install --save axios
+
+For calling yahoo finance api:
+See https://cryptocointracker.com/yahoo-finance/yahoo-finance-api
+e.g.
+https://query1.finance.yahoo.com/v8/finance/chart/TSLA?interval=1d&period1=1682899239&period2=1683244839
+
+convert to unix timestamp:
+https://www.epochconverter.com/
+
+Deploy to github pages:
+- See https://medium.com/@Roli_Dori/deploy-vue-cli-3-project-to-github-pages-ebeda0705fbd
+npm run build
+git add dist
+git commit -m "Initial dist subtree commit"
+git subtree push --prefix dist origin gh-pages
+
+
+How to solve cors error in vue for localhost:
+- See https://stackoverflow.com/questions/56801196/axios-get-request-resulting-in-cors-error
+- vue.config.js: add devServer: {
+    proxy: "https://query1.finance.yahoo.com",
+  },
+- src/api/index.js:change baseURL to baseURL: "http://localhost:8080/"
+
+Trying to setup a proxy server
+https://dev.to/terieyenike/how-to-create-a-proxy-server-on-heroku-5b5c
